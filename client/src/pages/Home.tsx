@@ -44,12 +44,12 @@ function PricingCard({ plan, userCount }: { plan: PricingPlan; userCount: number
             </span>
             <span className="flex items-center gap-1.5 text-sm text-slate-500">
               <Users size={14} />
-              {plan.maxUsersLabel} active users
+              {plan.maxUsersLabel} active Users
             </span>
           </div>
           <p className="text-slate-500 text-sm">
-            Your organisation with{" "}
-            <strong className="text-slate-800">{userCount.toLocaleString()} users</strong> qualifies
+            Your Organisation with{" "}
+            <strong className="text-slate-800">{userCount.toLocaleString()} Users</strong> qualifies
             for this plan.
           </p>
         </div>
@@ -102,7 +102,7 @@ function PricingCard({ plan, userCount }: { plan: PricingPlan; userCount: number
           <div className="flex items-center gap-1.5 text-emerald-600 bg-emerald-50 rounded-lg px-3 py-2 mt-auto">
             <TrendingDown size={13} />
             <span className="text-xs font-medium">
-              Save {formatCurrency(plan.savingsMonthlyRRP4mo)} vs monthly RRP
+            Save {formatCurrency(plan.savingsMonthlyRRP4mo)} v monthly RRP
             </span>
           </div>
         </div>
@@ -115,7 +115,7 @@ function PricingCard({ plan, userCount }: { plan: PricingPlan; userCount: number
           />
           <div className="flex items-center justify-between">
             <span className="text-xs font-bold uppercase tracking-widest text-slate-400">
-              Monthly
+              Paid Monthly
             </span>
             <span
               className="text-xs px-2 py-0.5 rounded-full font-medium text-white"
@@ -137,7 +137,7 @@ function PricingCard({ plan, userCount }: { plan: PricingPlan; userCount: number
           </div>
 
           <div className="border-t border-slate-100 pt-3">
-            <div className="text-xs text-slate-500 mb-0.5">Annual total</div>
+            <div className="text-xs text-slate-500 mb-0.5">Annual Total</div>
             <div
               className="text-lg font-bold text-slate-800"
               style={{ fontFamily: "var(--font-mono)" }}
@@ -149,7 +149,7 @@ function PricingCard({ plan, userCount }: { plan: PricingPlan; userCount: number
           <div className="flex items-center gap-1.5 text-emerald-600 bg-emerald-50 rounded-lg px-3 py-2 mt-auto">
             <TrendingDown size={13} />
             <span className="text-xs font-medium">
-              Save {formatCurrency(plan.savingsMonthlyRRP12mo)}/mo vs RRP
+            Save {formatCurrency(plan.savingsMonthlyRRP12mo)}/month v RRP
             </span>
           </div>
         </div>
@@ -166,7 +166,7 @@ function PricingCard({ plan, userCount }: { plan: PricingPlan; userCount: number
           </div>
           <div className="flex items-center justify-between">
             <span className="text-xs font-bold uppercase tracking-widest text-blue-100">
-              Annual
+              Paid Annually
             </span>
             <span className="text-xs bg-white/20 text-white px-2 py-0.5 rounded-full font-medium">
               12 months
@@ -182,12 +182,12 @@ function PricingCard({ plan, userCount }: { plan: PricingPlan; userCount: number
               {formatCurrency(plan.annual12Months)}
             </div>
             <div className="text-xs text-blue-100 mt-0.5">
-              {formatCurrency(Math.round(plan.annual12Months / 12))}/mo equivalent
+              {formatCurrency(Math.round(plan.annual12Months / 12))}/month
             </div>
           </div>
 
           <div className="border-t border-white/20 pt-3">
-            <div className="text-xs text-blue-100 mb-0.5">vs monthly RRP</div>
+            <div className="text-xs text-blue-100 mb-0.5">v monthly RRP</div>
             <div
               className="text-lg font-bold text-white"
               style={{ fontFamily: "var(--font-mono)" }}
@@ -198,7 +198,7 @@ function PricingCard({ plan, userCount }: { plan: PricingPlan; userCount: number
 
           <div className="flex items-center gap-1.5 bg-white/20 rounded-lg px-3 py-2 mt-auto">
             <TrendingDown size={13} />
-            <span className="text-xs font-medium">Maximum savings on annual plan</span>
+            <span className="text-xs font-medium">Maximum savings on Annual Plan</span>
           </div>
         </div>
       </div>
@@ -263,12 +263,12 @@ export default function Home() {
             className="text-3xl md:text-4xl font-black text-slate-900 mb-3 leading-tight"
             style={{ fontFamily: "var(--font-heading)" }}
           >
-            Find your{" "}
+            Find Your{" "}
             <span
               className="relative inline-block"
               style={{ color: BRAND_BLUE }}
             >
-              pricing plan
+              Pricing Plan
               {/* Blue underline accent matching buildingtools.co style */}
               <span
                 className="absolute left-0 bottom-0 w-full h-1 rounded-full"
@@ -278,8 +278,7 @@ export default function Home() {
             .
           </h1>
           <p className="text-slate-500 text-base leading-relaxed mt-3">
-            Enter the number of active users in your organisation to instantly see the plan and
-            pricing that applies to you.
+            Instantly see the Plan &amp; Pricing that applies to your Organisation.
           </p>
         </div>
 
@@ -364,10 +363,10 @@ export default function Home() {
                 <Info size={18} className="text-amber-500 mt-0.5 shrink-0" />
                 <div>
                   <p className="font-bold text-amber-900 mb-1">
-                    Over 1,000 users
+                    Over 1,000 Users
                   </p>
                   <p className="text-amber-700 text-sm">
-                    Your organisation has more than 1,000 active users. Please contact the
+                    Your Organisation has more than 1,000 active Users. Please contact the
                     Tools™ team directly for a custom enterprise quote tailored to your needs.
                   </p>
                 </div>
@@ -390,7 +389,7 @@ export default function Home() {
               </div>
               <p className="text-slate-600 font-bold mb-1">No plan found</p>
               <p className="text-slate-400 text-sm">
-                Please enter a valid number of users between 1 and 1,000.
+                Please enter a valid number of Users between 1 and 1,000.
               </p>
             </motion.div>
           )}
