@@ -338,17 +338,11 @@ export default function Home() {
               animate={{ opacity: 1 }}
               className="rounded-2xl border-2 border-dashed border-slate-200 bg-slate-50/50 p-10 flex flex-col items-center justify-center text-center"
             >
-              <div
-                className="w-12 h-12 rounded-full flex items-center justify-center mb-4"
-                style={{ backgroundColor: `${BRAND_BLUE}15` }}
-              >
-                <Users size={22} style={{ color: BRAND_BLUE }} />
-              </div>
               <p className="text-slate-600 font-bold mb-1">
-                Enter your user count above
+                Enter your User count above
               </p>
               <p className="text-slate-400 text-sm">
-                Your applicable Plan and Pricing will appear here instantly.
+                Your applicable Plan &amp; Pricing will appear Instantly.
               </p>
             </motion.div>
           )}
