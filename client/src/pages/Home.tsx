@@ -21,8 +21,8 @@ const BRAND_BLUE = "#1482ff";
 const BRAND_BLUE_DARK = "#0068df";
 const BRAND_GRADIENT = `linear-gradient(258.2deg, ${BRAND_BLUE} -24.08%, ${BRAND_BLUE_DARK} 110.8%)`;
 
-// Tools™ logo CDN URL
-const TOOLS_LOGO_URL = "https://d2xsxph8kpxj0f.cloudfront.net/98544406/chok685E7WvtMm3xAumjda/tools-logo_01b0460b.png";
+// Tools™ logo
+const TOOLS_LOGO_URL = "/Logo.png";
 
 function PricingCard({ plan, userCount }: { plan: PricingPlan; userCount: number }) {
   return (
@@ -50,7 +50,7 @@ function PricingCard({ plan, userCount }: { plan: PricingPlan; userCount: number
           <p className="text-slate-500 text-sm">
             Your Organisation with{" "}
             <strong className="text-slate-800">{userCount.toLocaleString()} Users</strong> qualifies
-            for this plan.
+            for this Plan.
           </p>
         </div>
         <div
@@ -174,7 +174,7 @@ function PricingCard({ plan, userCount }: { plan: PricingPlan; userCount: number
           </div>
 
           <div>
-            <div className="text-xs text-blue-100 mb-0.5">Paid annually</div>
+            <div className="text-xs text-blue-100 mb-0.5">Paid Annually</div>
             <div
               className="text-2xl font-bold text-white"
               style={{ fontFamily: "var(--font-mono)" }}
@@ -348,7 +348,7 @@ export default function Home() {
                 Enter your user count above
               </p>
               <p className="text-slate-400 text-sm">
-                Your applicable plan and pricing will appear here instantly.
+                Your applicable Plan and Pricing will appear here instantly.
               </p>
             </motion.div>
           )}
@@ -387,7 +387,7 @@ export default function Home() {
               <div className="w-12 h-12 rounded-full bg-slate-100 flex items-center justify-center mb-4">
                 <Info size={22} className="text-slate-400" />
               </div>
-              <p className="text-slate-600 font-bold mb-1">No plan found</p>
+              <p className="text-slate-600 font-bold mb-1">No Plan found</p>
               <p className="text-slate-400 text-sm">
                 Please enter a valid number of Users between 1 and 1,000.
               </p>
