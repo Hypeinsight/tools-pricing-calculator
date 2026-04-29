@@ -24,6 +24,9 @@ const BRAND_GRADIENT = `linear-gradient(258.2deg, ${BRAND_BLUE} -24.08%, ${BRAND
 // Tools™ logo
 const TOOLS_LOGO_URL = "/Logo.png";
 
+// Building Tools website
+const BUILDING_TOOLS_URL = "https://buildingtools.co/";
+
 function PricingCard({ plan, userCount }: { plan: PricingPlan; userCount: number }) {
   return (
     <motion.div
@@ -240,16 +243,27 @@ export default function Home() {
 
   return (
     <div className="print-root min-h-screen bg-white">
+      {/* Print-only watermark */}
+      <div className="print-watermark" aria-hidden="true" />
+
       {/* Top bar */}
       <div className="print-hide border-b border-slate-100 bg-white sticky top-0 z-10">
         <div className="container">
           <div className="flex items-center justify-between h-16">
             {/* Tools™ Logo */}
-            <img
-              src={TOOLS_LOGO_URL}
-              alt="Tools™"
-              className="h-8 w-auto"
-            />
+            <a
+              href={BUILDING_TOOLS_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Visit buildingtools.co"
+              className="inline-flex"
+            >
+              <img
+                src={TOOLS_LOGO_URL}
+                alt="Tools™"
+                className="h-8 w-auto"
+              />
+            </a>
             <span className="text-xs text-slate-400 font-medium">Enterprise Pricing 2026</span>
           </div>
         </div>
@@ -393,9 +407,27 @@ export default function Home() {
       {/* Footer */}
       <footer className="print-hide border-t border-slate-100 mt-16">
         <div className="container py-6 flex flex-col sm:flex-row items-center justify-between gap-3">
-          <img src={TOOLS_LOGO_URL} alt="Tools™" className="h-6 w-auto opacity-60" />
+          <a
+            href={BUILDING_TOOLS_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Visit buildingtools.co"
+            className="inline-flex"
+          >
+            <img src={TOOLS_LOGO_URL} alt="Tools™" className="h-6 w-auto opacity-60 hover:opacity-100 transition-opacity" />
+          </a>
           <p className="text-xs text-slate-400 text-center">
-            Tools™ Enterprise Pricing 2026. All prices in AUD. Pricing subject to change.
+            Tools™ Enterprise Pricing 2026. All prices in AUD. Pricing subject to change. Visit{" "}
+            <a
+              href={BUILDING_TOOLS_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-medium hover:underline"
+              style={{ color: BRAND_BLUE }}
+            >
+              buildingtools.co
+            </a>
+            .
           </p>
         </div>
       </footer>
