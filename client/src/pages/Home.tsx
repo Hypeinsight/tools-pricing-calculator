@@ -63,8 +63,8 @@ function PricingCard({ plan, userCount }: { plan: PricingPlan; userCount: number
       </div>
 
       {/* Pricing Sections */}
-      <div className="grid grid-cols-1 gap-4 md:grid-cols-3">
-        {/* 4-Month Pilot */}
+      <div className="print-pricing-grid grid grid-cols-1 gap-4 md:grid-cols-3">
+        {/* 3-Month Pilot */}
         <div className="rounded-xl border border-slate-200 bg-slate-50 p-5 flex flex-col gap-3">
           <div className="flex items-center justify-between">
             <span className="text-xs font-bold uppercase tracking-widest text-slate-400">
@@ -74,7 +74,7 @@ function PricingCard({ plan, userCount }: { plan: PricingPlan; userCount: number
               className="text-xs px-2 py-0.5 rounded-full font-medium text-white"
               style={{ backgroundColor: BRAND_BLUE }}
             >
-              Months 1–4
+              Months 1–3
             </span>
           </div>
 
@@ -84,25 +84,25 @@ function PricingCard({ plan, userCount }: { plan: PricingPlan; userCount: number
               className="text-2xl font-bold text-slate-900"
               style={{ fontFamily: "var(--font-mono)" }}
             >
-              {formatCurrency(plan.monthly4Months)}
+              {formatCurrency(plan.monthly3Months)}
             </div>
             <div className="text-xs text-slate-400 mt-0.5">per month</div>
           </div>
 
           <div className="border-t border-slate-200 pt-3">
-            <div className="text-xs text-slate-500 mb-0.5">Total 4-month commitment</div>
+            <div className="text-xs text-slate-500 mb-0.5">Total 3-month commitment</div>
             <div
               className="text-lg font-bold text-slate-800"
               style={{ fontFamily: "var(--font-mono)" }}
             >
-              {formatCurrency(plan.total4MonthCommitment)}
+              {formatCurrency(plan.total3MonthCommitment)}
             </div>
           </div>
 
           <div className="flex items-center gap-1.5 text-emerald-600 bg-emerald-50 rounded-lg px-3 py-2 mt-auto">
             <TrendingDown size={13} />
             <span className="text-xs font-medium">
-            Save {formatCurrency(plan.savingsMonthlyRRP4mo)} v monthly RRP
+            Save {formatCurrency(plan.savingsMonthlyRRP3mo)} v monthly RRP
             </span>
           </div>
         </div>
@@ -187,7 +187,7 @@ function PricingCard({ plan, userCount }: { plan: PricingPlan; userCount: number
           </div>
 
           <div className="border-t border-white/20 pt-3">
-            <div className="text-xs text-blue-100 mb-0.5">v monthly RRP</div>
+            <div className="text-xs text-blue-100 mb-0.5">v annual RRP</div>
             <div
               className="text-lg font-bold text-white"
               style={{ fontFamily: "var(--font-mono)" }}
@@ -239,9 +239,9 @@ export default function Home() {
   const hasResult = !isEmpty && (plan !== null || showOverLimit);
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="print-root min-h-screen bg-white">
       {/* Top bar */}
-      <div className="border-b border-slate-100 bg-white sticky top-0 z-10">
+      <div className="print-hide border-b border-slate-100 bg-white sticky top-0 z-10">
         <div className="container">
           <div className="flex items-center justify-between h-16">
             {/* Tools™ Logo */}
@@ -258,7 +258,7 @@ export default function Home() {
       {/* Main content */}
       <div className="container py-12 md:py-16">
         {/* Hero */}
-        <div className="mb-10 max-w-xl">
+        <div className="print-hero mb-10 max-w-xl">
           <h1
             className="text-3xl md:text-4xl font-black text-slate-900 mb-3 leading-tight"
             style={{ fontFamily: "var(--font-heading)" }}
@@ -283,7 +283,7 @@ export default function Home() {
         </div>
 
         {/* Input */}
-        <div className="mb-8">
+        <div className="print-input-row mb-8">
           <label
             htmlFor="user-count"
             className="block text-sm font-bold text-slate-700 mb-2"
@@ -391,7 +391,7 @@ export default function Home() {
       </div>
 
       {/* Footer */}
-      <footer className="border-t border-slate-100 mt-16">
+      <footer className="print-hide border-t border-slate-100 mt-16">
         <div className="container py-6 flex flex-col sm:flex-row items-center justify-between gap-3">
           <img src={TOOLS_LOGO_URL} alt="Tools™" className="h-6 w-auto opacity-60" />
           <p className="text-xs text-slate-400 text-center">
