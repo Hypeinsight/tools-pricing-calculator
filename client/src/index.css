@@ -181,20 +181,17 @@
     print-color-adjust: exact;
   }
 
-  /* Tiled, faded Tools™ logo across the printed page */
+  /* One large faded Tools™ logo, diagonal across the printed page */
   .print-watermark {
     display: block;
     position: fixed;
-    top: -50%;
-    left: -50%;
-    width: 200%;
-    height: 200%;
+    inset: 0;
     background-image: url("/Logo.png");
-    background-repeat: repeat;
-    background-size: 160px auto;
-    background-position: top left;
-    opacity: 0.07;
-    transform: rotate(-30deg);
+    background-repeat: no-repeat;
+    background-size: 90% auto;
+    background-position: center center;
+    opacity: 0.08;
+    transform: rotate(-28deg);
     transform-origin: center center;
     pointer-events: none;
     z-index: 0;
@@ -211,7 +208,6 @@
   /* Hide sticky chrome that wastes vertical space */
   .print-hide,
   header,
-  footer,
   .sticky {
     display: none !important;
   }
@@ -228,7 +224,6 @@
     text-align: center;
     display: flex !important;
     flex-direction: column;
-    justify-content: center;
   }
 
   .container {
@@ -240,6 +235,31 @@
     flex-direction: column;
     justify-content: center;
     flex: 1 1 auto;
+  }
+
+  /* Print footer sits at the bottom of the page, compact and centered */
+  .print-root .print-footer {
+    margin-top: 6mm !important;
+    border-top: 1px solid #e2e8f0 !important;
+    padding-top: 4mm !important;
+    flex: 0 0 auto;
+  }
+
+  .print-root .print-footer > div {
+    padding: 0 !important;
+    flex-direction: row !important;
+    justify-content: center !important;
+    gap: 4mm !important;
+  }
+
+  .print-root .print-footer img {
+    height: 5mm !important;
+    width: auto !important;
+  }
+
+  .print-root .print-footer p {
+    font-size: 8pt !important;
+    margin: 0 !important;
   }
 
   /* Reset min-heights that create empty whitespace on print */

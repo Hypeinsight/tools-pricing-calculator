@@ -405,7 +405,7 @@ export default function Home() {
       </div>
 
       {/* Footer */}
-      <footer className="print-hide border-t border-slate-100 mt-16">
+      <footer className="print-footer border-t border-slate-100 mt-16">
         <div className="container py-6 flex flex-col sm:flex-row items-center justify-between gap-3">
           <a
             href={BUILDING_TOOLS_URL}
